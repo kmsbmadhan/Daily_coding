@@ -1,0 +1,10 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        if not nums or len(nums) < 2:
+            return [-1, -1]
+        mapping = {}
+        for index, num in enumerate(nums):
+            if target - num in mapping:
+                return [mapping[target - num], index]
+            mapping[num] = index
+        return [-1, -1]
