@@ -1,3 +1,7 @@
+"""
+This code returns the indices of the numbers that adds up to the target value
+Usage: Pass numbers as list and a target value
+"""
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         if not nums or len(nums) < 2:
