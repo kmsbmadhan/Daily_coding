@@ -1,0 +1,11 @@
+def max_sub_array_of_size_k(k, arr):
+  result = []
+  windowsum, windowstart = 0, 0
+  for windowend in range(len(arr)):
+    windowsum += arr[windowend]
+
+    if windowend >= k -1:
+      result.append(windowsum)
+      windowsum -= arr[windowstart]
+      windowstart += 1
+  return max(result)
